@@ -34,7 +34,7 @@ export default function Hero() {
                 alt={t('avatarAlt')}
                 fill
                 sizes="112px"
-                className="object-cover"
+                className="object-cover object-[center_85%]"
                 priority
               />
             </div>

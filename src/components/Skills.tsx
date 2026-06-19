@@ -12,7 +12,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="relative scroll-mt-24 py-24 sm:py-32">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-0 top-1/3 h-[400px] w-[400px] rounded-full bg-accent-500/10 blur-[120px]" />
       </div>
 

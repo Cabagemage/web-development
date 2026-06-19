@@ -80,7 +80,7 @@ export default function About() {
 
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute right-0 top-1/4 h-[400px] w-[400px] rounded-full bg-brand-600/10 blur-[120px]" />
       </div>
 
