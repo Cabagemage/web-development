@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -12,6 +13,8 @@ import {
 } from '@/config';
 import StructuredData from '@/components/StructuredData';
 import '../globals.css';
+
+const GTM_ID = 'GTM-TNW5PC8F';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -97,6 +100,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <GoogleTagManager gtmId={GTM_ID} />
       <head>
         <StructuredData
           locale={locale}
@@ -118,6 +122,15 @@ export default async function LocaleLayout({
         />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

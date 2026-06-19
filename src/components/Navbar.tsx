@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from './Logo';
 
 const LINKS = [
   { id: 'services', key: 'services' },
@@ -42,9 +43,7 @@ export default function Navbar() {
     >
       <nav className="container-px flex h-16 items-center justify-between sm:h-20">
         <a href="#top" className="group flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-lg font-bold text-white shadow-lg shadow-brand-500/30">
-            C
-          </span>
+          <Logo className="h-9 w-9 shadow-lg shadow-brand-500/30 transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105 rounded-xl" />
           <span className="font-display text-lg font-bold tracking-tight text-white">
             Code<span className="text-gradient">mage</span>
           </span>

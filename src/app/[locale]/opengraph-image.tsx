@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { logoDataUri } from '@/lib/logo';
 
 export const alt = 'Codemage — Full-stack Developer';
 export const size = { width: 1200, height: 630 };
@@ -32,22 +33,8 @@ export default function OpengraphImage() {
             fontWeight: 600
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 64,
-              height: 64,
-              borderRadius: 16,
-              background: 'linear-gradient(135deg, #327dff, #06b6d4)',
-              color: 'white',
-              fontSize: 38,
-              fontWeight: 700
-            }}
-          >
-            C
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img width={64} height={64} src={logoDataUri('og')} alt="" />
           Codemage
         </div>
 

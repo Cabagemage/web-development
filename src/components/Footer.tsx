@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Logo from './Logo';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -10,9 +11,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 py-10">
       <div className="container-px flex flex-col items-center justify-between gap-5 sm:flex-row">
         <div className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-white">
-            C
-          </span>
+          <Logo className="h-8 w-8 rounded-lg" />
           <span className="font-display font-bold text-white">
             Code<span className="text-gradient">mage</span>
           </span>

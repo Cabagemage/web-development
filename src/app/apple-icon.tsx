@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { logoDataUri } from '@/lib/logo';
 
 export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
@@ -13,15 +14,11 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #1b5cf5 0%, #327dff 45%, #06b6d4 100%)',
-          color: 'white',
-          fontSize: 112,
-          fontWeight: 800,
-          fontFamily: 'sans-serif',
-          letterSpacing: '-4px'
+          background: '#070a14'
         }}
       >
-        C
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img width={150} height={150} src={logoDataUri('apple')} alt="" />
       </div>
     ),
     { ...size }
