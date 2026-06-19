@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "title": "Codemage — Web Development by an Independent Developer",
+    "description": "Modern, fast and scalable websites and web apps. Frontend, backend and full-stack development for startups and businesses.",
+    "keywords": "web development, web design, frontend, backend, react, next.js, full-stack developer"
+  },
+  "nav": {
+    "services": "Services",
+    "skills": "Stack",
+    "work": "Work",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "hero": {
+    "badge": "Available for new projects",
+    "avatarAlt": "Andrei, web developer",
+    "title1": "Hello, I'm",
+    "titleHighlight": "Andrei",
+    "title2": "— and I'll help you reach results",
+    "subtitle": "Full-stack web development focused on clean code, beautiful design and measurable results. From idea to launch — fast, reliable and scalable.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "View my work",
+    "stats": [
+      { "value": "6+", "label": "Years of experience" },
+      { "value": "30+", "label": "Happy clients" },
+      { "value": "99%", "label": "Uptime & quality" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What I can do for you",
+    "subtitle": "End-to-end web development — everything you need to launch and scale your product online.",
+    "items": [
+      {
+        "title": "Web Applications",
+        "desc": "Complex, interactive web apps with smooth UX, real-time features and rock-solid architecture."
+      },
+      {
+        "title": "Frontend & UI",
+        "desc": "Pixel-perfect, responsive interfaces built with React and Next.js that feel fast and look stunning."
+      },
+      {
+        "title": "Backend & APIs",
+        "desc": "Secure, scalable backends, REST and GraphQL APIs, databases and cloud infrastructure."
+      },
+      {
+        "title": "E-commerce",
+        "desc": "Online stores and payment integrations that convert visitors into customers and grow revenue."
+      },
+      {
+        "title": "Performance & SEO",
+        "desc": "Lightning-fast load times, Core Web Vitals optimization and search-engine-ready code."
+      },
+      {
+        "title": "Support & Maintenance",
+        "desc": "Ongoing updates, monitoring and improvements to keep your product secure and up to date."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Tech Stack",
+    "title": "Tools I work with",
+    "subtitle": "A modern, battle-tested toolkit for building products that last.",
+    "groups": [
+      {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "Micro-frontends", "Tailwind CSS"]
+      },
+      {
+        "title": "Backend",
+        "items": ["Node.js", "Golang", "PostgreSQL", "BFF", "REST API", "WebSockets"]
+      },
+      {
+        "title": "Tools & DevEx",
+        "items": ["Docker", "CI/CD", "GitHub Actions", "Webpack", "OpenAPI / Swagger", "Git"]
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Selected Work",
+    "title": "Cases I've worked on",
+    "subtitle": "Over 6 years building and scaling complex B2B/B2C web applications — from retail super-apps to document workflow and EdTech platforms.",
+    "items": [
+      {
+        "title": "Retail Super-App Platform",
+        "category": "Enterprise · X5 Tech",
+        "desc": "Architected and delivered a high-load quick-survey system under tight deadlines and built a micro-frontends architecture inside a retail super-app, enabling independent deployment and scaling of features. Added a real-time WebSocket chat-bot module and strengthened the Node.js BFF layer.",
+        "tags": ["React", "TypeScript", "Micro-frontends", "WebSockets"]
+      },
+      {
+        "title": "Document Management Platform",
+        "category": "Document Workflow · Astral-Soft",
+        "desc": "Modernized the architecture of a large-scale document management platform and optimized Webpack builds. Reduced backend load by improving the BFF layer with request caching, and accelerated delivery via Docker-cached CI/CD, shared component libraries and frontend code generation.",
+        "tags": ["React", "TypeScript", "BFF", "CI/CD"]
+      },
+      {
+        "title": "EdTech Learning Platform",
+        "category": "EdTech · Spiks",
+        "desc": "Built a custom video player with timestamps and a dynamic course builder for an online education product. Set up a unified analytics abstraction (Google/Yandex) and a contract-first workflow with backend teams using Swagger.",
+        "tags": ["React", "Video Player", "Swagger", "Analytics"]
+      },
+      {
+        "title": "CRM & GovTech Solutions",
+        "category": "CRM · GovTech · Spiks",
+        "desc": "Delivered high-impact features across CRM and GovTech products. Improved Developer Experience by configuring GitHub Actions CI/CD and enforcing code standards with ESLint to keep large teams fast and consistent.",
+        "tags": ["React", "TypeScript", "GitHub Actions", "ESLint"]
+      },
+      {
+        "title": "CS:GO Case Opening Platform",
+        "category": "Gaming · iGaming",
+        "desc": "A gaming platform for opening Counter-Strike: GO cases — with animated roulette-style drops, real-time inventory, item upgrade mechanics and secure payments.",
+        "tags": ["React", "WebSockets", "Animations", "Payments"]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How I work",
+    "title": "A simple, transparent process",
+    "subtitle": "Clear communication and steady progress from the first call to launch and beyond.",
+    "steps": [
+      {
+        "title": "Discovery",
+        "desc": "We discuss your goals, audience and requirements to define a clear scope and roadmap."
+      },
+      {
+        "title": "Design",
+        "desc": "I craft wireframes and a polished UI that matches your brand and delights your users."
+      },
+      {
+        "title": "Development",
+        "desc": "Clean, tested and well-documented code built in short iterations with regular demos."
+      },
+      {
+        "title": "Launch & Support",
+        "desc": "We ship to production, monitor performance and keep improving after release."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something great",
+    "subtitle": "Have a project in mind or just want to say hi? I usually reply within a few hours.",
+    "cta": "Message on Telegram",
+    "channels": {
+      "email": "Email",
+      "telegram": "Telegram",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook"
+    },
+    "form": {
+      "heading": "Send me a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "projectType": "Project type",
+      "projectTypeOptions": [
+        "Web application",
+        "Website / Landing",
+        "E-commerce",
+        "Gaming platform",
+        "Other"
+      ],
+      "budget": "Budget",
+      "budgetOptions": [
+        "< $1,000",
+        "$1,000 – $3,000",
+        "$3,000 – $7,000",
+        "$7,000+",
+        "Not sure yet"
+      ],
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Thanks! Your message has been sent — I'll get back to you soon.",
+      "error": "Something went wrong. Please try again or write me directly."
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About me",
+    "subtitle": "An independent developer based in Tbilisi, Georgia — registered as an individual entrepreneur and working with clients worldwide.",
+    "name": "Andrei",
+    "role": "Full-stack Developer",
+    "bio": "Hi! I'm a full-stack developer with 6+ years of experience building and scaling complex B2B/B2C web applications — e-commerce, document workflow, EdTech and gaming platforms. On the frontend I work with React and TypeScript; on the backend with Node.js and Golang — so you get fast, reliable products and a single point of contact.",
+    "detailsTitle": "Business details",
+    "contactsTitle": "Contacts",
+    "legalFormLabel": "Legal form",
+    "legalForm": "Individual Entrepreneur",
+    "idLabel": "ID",
+    "activityLabel": "Activity field",
+    "activityValue": "Software",
+    "addressLabel": "Address",
+    "addressValue": "Georgia, Tbilisi, Saburtalo district, Bakhtrioni street, N22"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}
