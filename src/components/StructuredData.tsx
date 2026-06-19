@@ -15,11 +15,7 @@ export default function StructuredData({
   addressLocality: string;
   streetAddress: string;
 }) {
-  const sameAs = [
-    siteConfig.social.telegram,
-    siteConfig.social.linkedin,
-    siteConfig.social.facebook
-  ];
+  const sameAs = [siteConfig.social.telegram, siteConfig.social.facebook];
 
   const person = {
     '@type': 'Person',

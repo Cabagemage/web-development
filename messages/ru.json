@@ -146,7 +146,6 @@
     "channels": {
       "email": "Email",
       "telegram": "Telegram",
-      "linkedin": "LinkedIn",
       "facebook": "Facebook"
     },
     "form": {

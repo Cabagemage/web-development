@@ -9,7 +9,6 @@ export const siteConfig = {
   twitter: '@Memecounterr',
   social: {
     telegram: 'https://t.me/Memecounterr',
-    linkedin: 'https://www.linkedin.com/in/cabagemage/',
     facebook: 'https://www.facebook.com/profile.php?id=61590966781844'
   }
 };
