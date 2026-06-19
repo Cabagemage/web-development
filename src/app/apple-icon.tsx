@@ -13,13 +13,15 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #327dff, #06b6d4)',
+          background: 'linear-gradient(135deg, #1b5cf5 0%, #327dff 45%, #06b6d4 100%)',
           color: 'white',
-          fontSize: 110,
-          fontWeight: 700
+          fontSize: 112,
+          fontWeight: 800,
+          fontFamily: 'sans-serif',
+          letterSpacing: '-4px'
         }}
       >
-        A
+        M
       </div>
     ),
     { ...size }

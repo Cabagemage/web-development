@@ -13,14 +13,17 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #327dff, #06b6d4)',
+          background: 'linear-gradient(135deg, #1b5cf5 0%, #327dff 45%, #06b6d4 100%)',
           color: 'white',
-          fontSize: 22,
-          fontWeight: 700,
-          borderRadius: 7
+          fontSize: 23,
+          fontWeight: 800,
+          fontFamily: 'sans-serif',
+          letterSpacing: '-1px',
+          borderRadius: 8,
+          boxShadow: 'inset 0 1px 2px rgba(255,255,255,0.35)'
         }}
       >
-        A
+        M
       </div>
     ),
     { ...size }

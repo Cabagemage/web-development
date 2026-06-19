@@ -11,15 +11,15 @@ export default function Footer() {
       <div className="container-px flex flex-col items-center justify-between gap-5 sm:flex-row">
         <div className="flex items-center gap-2.5">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-white">
-            A
+            M
           </span>
           <span className="font-display font-bold text-white">
-            And<span className="text-gradient">rei</span>
+            Mze<span className="text-gradient">Dev</span>
           </span>
         </div>
 
         <p className="text-center text-sm text-slate-500">
-          © {year} Andrei. {t('rights')}
+          © {year} MzeDev. {t('rights')}
         </p>
 
         <a
