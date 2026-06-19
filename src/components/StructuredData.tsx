@@ -51,7 +51,7 @@ export default function StructuredData({
   const service = {
     '@type': 'ProfessionalService',
     '@id': `${SITE_URL}/#service`,
-    name: 'MzeDev — Web Development',
+    name: 'Codemage — Web Development',
     url: SITE_URL,
     image: `${SITE_URL}/portrait.png`,
     description,

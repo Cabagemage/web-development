@@ -43,10 +43,10 @@ export default function Navbar() {
       <nav className="container-px flex h-16 items-center justify-between sm:h-20">
         <a href="#top" className="group flex items-center gap-2.5">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-lg font-bold text-white shadow-lg shadow-brand-500/30">
-            M
+            C
           </span>
           <span className="font-display text-lg font-bold tracking-tight text-white">
-            Mze<span className="text-gradient">Dev</span>
+            Code<span className="text-gradient">mage</span>
           </span>
         </a>
 

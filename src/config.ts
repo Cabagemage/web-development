@@ -5,7 +5,7 @@ export const SITE_URL = 'https://andrei.dev';
 
 export const siteConfig = {
   url: SITE_URL,
-  name: 'MzeDev',
+  name: 'Codemage',
   twitter: '@Memecounterr',
   social: {
     telegram: 'https://t.me/Memecounterr',
