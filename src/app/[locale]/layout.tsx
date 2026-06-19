@@ -4,6 +4,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { routing, type Locale } from '@/i18n/routing';
 import {
   SITE_URL,
@@ -15,6 +16,7 @@ import StructuredData from '@/components/StructuredData';
 import '../globals.css';
 
 const GTM_ID = 'GTM-TNW5PC8F';
+const GOOGLE_ADS_ID = 'AW-18253826253';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -101,6 +103,18 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <GoogleTagManager gtmId={GTM_ID} />
+      <Script
+        id="gtag-src"
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`}
+      </Script>
       <head>
         <StructuredData
           locale={locale}
