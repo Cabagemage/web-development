@@ -16,13 +16,13 @@ export default function StructuredData({
   streetAddress: string;
 }) {
   const sameAs = [siteConfig.social.telegram, siteConfig.social.facebook];
+  const logoUrl = `${SITE_URL}/icon`;
 
   const person = {
     '@type': 'Person',
     '@id': `${SITE_URL}/#person`,
     name: 'Andrei',
     url: SITE_URL,
-    image: `${SITE_URL}/portrait.png`,
     jobTitle,
     description,
     sameAs,
@@ -49,7 +49,7 @@ export default function StructuredData({
     '@id': `${SITE_URL}/#service`,
     name: 'Codemage — Web Development',
     url: SITE_URL,
-    image: `${SITE_URL}/portrait.png`,
+    logo: logoUrl,
     description,
     provider: { '@id': `${SITE_URL}/#person` },
     areaServed: 'Worldwide',

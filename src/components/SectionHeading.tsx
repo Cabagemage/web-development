@@ -13,7 +13,7 @@ export default function SectionHeading({
     <div className="mx-auto max-w-2xl text-center">
       {eyebrow && (
         <Reveal>
-          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-300">
+          <span className="mono-label inline-block text-xs text-[color:var(--signal)]">
             {eyebrow}
           </span>
         </Reveal>

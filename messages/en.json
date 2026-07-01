@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Codemage — Web Development by an Independent Developer",
-    "description": "Modern, fast and scalable websites and web apps. Frontend, backend and full-stack development for startups and businesses.",
+    "title": "Codemage — Full-stack Web Development by Andrei",
+    "description": "Fast, maintainable websites, web apps, storefronts and integrations for startups and small teams.",
     "keywords": "web development, web design, frontend, backend, react, next.js, full-stack developer"
   },
   "nav": {
@@ -11,58 +11,60 @@
     "process": "Process",
     "about": "About",
     "contact": "Contact",
-    "cta": "Let's talk"
+    "cta": "Discuss a project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Change language"
   },
   "hero": {
     "badge": "Available for new projects",
-    "avatarAlt": "Andrei, web developer",
-    "title1": "Hello, I'm",
+    "title1": "I'm",
     "titleHighlight": "Andrei",
-    "title2": "— and I'll help you reach results",
-    "subtitle": "Full-stack web development focused on clean code, beautiful design and measurable results. From idea to launch — fast, reliable and scalable.",
-    "ctaPrimary": "Start a project",
-    "ctaSecondary": "View my work",
+    "title2": "— a full-stack developer for web products",
+    "subtitle": "I turn unclear product ideas into scoped, launch-ready web apps with React, Next.js, Node.js and Golang. You get direct communication, pragmatic UI decisions and code that is easy to maintain.",
+    "ctaPrimary": "Discuss a project",
+    "ctaSecondary": "View work",
     "stats": [
-      { "value": "6+", "label": "Years of experience" },
-      { "value": "30+", "label": "Happy clients" },
-      { "value": "99%", "label": "Uptime & quality" }
+      { "value": "6+", "label": "Years building web products" },
+      { "value": "30+", "label": "Projects delivered" },
+      { "value": "1", "label": "Point of contact" }
     ]
   },
   "services": {
     "eyebrow": "Services",
-    "title": "What I can do for you",
-    "subtitle": "End-to-end web development — everything you need to launch and scale your product online.",
+    "title": "Web development that moves the product forward",
+    "subtitle": "From first scope to production support: focused engineering for sites, apps and integrations that need to be clear, fast and reliable.",
     "items": [
       {
         "title": "Web Applications",
-        "desc": "Complex, interactive web apps with smooth UX, real-time features and rock-solid architecture."
+        "desc": "Dashboards, portals and product interfaces with clear flows, real-time updates and maintainable frontend architecture."
       },
       {
         "title": "Frontend & UI",
-        "desc": "Pixel-perfect, responsive interfaces built with React and Next.js that feel fast and look stunning."
+        "desc": "Responsive React and Next.js interfaces that stay readable, fast and consistent across devices."
       },
       {
         "title": "Backend & APIs",
-        "desc": "Secure, scalable backends, REST and GraphQL APIs, databases and cloud infrastructure."
+        "desc": "Node.js and Golang services, REST or GraphQL APIs, databases and integrations designed around the product flow."
       },
       {
         "title": "E-commerce",
-        "desc": "Online stores and payment integrations that convert visitors into customers and grow revenue."
+        "desc": "Storefronts, checkout flows and payment integrations built to reduce friction and support growth."
       },
       {
         "title": "Performance & SEO",
-        "desc": "Lightning-fast load times, Core Web Vitals optimization and search-engine-ready code."
+        "desc": "Core Web Vitals, structured metadata and frontend optimization so pages load quickly and can be indexed properly."
       },
       {
         "title": "Support & Maintenance",
-        "desc": "Ongoing updates, monitoring and improvements to keep your product secure and up to date."
+        "desc": "Bug fixes, updates, monitoring and incremental improvements after launch."
       }
     ]
   },
   "skills": {
     "eyebrow": "Tech Stack",
-    "title": "Tools I work with",
-    "subtitle": "A modern, battle-tested toolkit for building products that last.",
+    "title": "Stack I use in production",
+    "subtitle": "A focused toolkit for maintainable products, not a list of every library I've tried.",
     "groups": [
       {
         "title": "Frontend",
@@ -73,83 +75,82 @@
         "items": ["Node.js", "Golang", "PostgreSQL", "BFF", "REST API", "WebSockets"]
       },
       {
-        "title": "Tools & DevEx",
+        "title": "Tools & delivery",
         "items": ["Docker", "CI/CD", "GitHub Actions", "Webpack", "OpenAPI / Swagger", "Git"]
       }
     ]
   },
   "portfolio": {
     "eyebrow": "Selected Work",
-    "title": "Cases I've worked on",
-    "subtitle": "Over 6 years building and scaling complex B2B/B2C web applications — from retail super-apps to document workflow and EdTech platforms.",
+    "title": "Product work in the real world",
+    "subtitle": "Examples across enterprise retail, document workflow, EdTech, CRM/GovTech and gaming platforms.",
     "items": [
       {
         "title": "Retail Super-App Platform",
         "category": "Enterprise · X5 Tech",
-        "desc": "Architected and delivered a high-load quick-survey system under tight deadlines and built a micro-frontends architecture inside a retail super-app, enabling independent deployment and scaling of features. Added a real-time WebSocket chat-bot module and strengthened the Node.js BFF layer.",
+        "desc": "Built a high-load quick-survey module under tight deadlines, introduced micro-frontends for independent releases, and added a real-time WebSocket chat-bot with a stronger Node.js BFF layer.",
         "tags": ["React", "TypeScript", "Micro-frontends", "WebSockets"]
       },
       {
         "title": "Document Management Platform",
         "category": "Document Workflow · Astral-Soft",
-        "desc": "Modernized the architecture of a large-scale document management platform and optimized Webpack builds. Reduced backend load by improving the BFF layer with request caching, and accelerated delivery via Docker-cached CI/CD, shared component libraries and frontend code generation.",
+        "desc": "Modernized a large document workflow product, optimized Webpack builds, reduced backend pressure with BFF caching, and sped up delivery through Docker-cached CI/CD and generated frontend clients.",
         "tags": ["React", "TypeScript", "BFF", "CI/CD"]
       },
       {
         "title": "EdTech Learning Platform",
         "category": "EdTech · Spiks",
-        "desc": "Built a custom video player with timestamps and a dynamic course builder for an online education product. Set up a unified analytics abstraction (Google/Yandex) and a contract-first workflow with backend teams using Swagger.",
+        "desc": "Built a custom video player with timestamps and a dynamic course builder. Added shared Google/Yandex analytics and a Swagger-led workflow with backend teams.",
         "tags": ["React", "Video Player", "Swagger", "Analytics"]
       },
       {
         "title": "CRM & GovTech Solutions",
         "category": "CRM · GovTech · Spiks",
-        "desc": "Delivered high-impact features across CRM and GovTech products. Improved Developer Experience by configuring GitHub Actions CI/CD and enforcing code standards with ESLint to keep large teams fast and consistent.",
+        "desc": "Delivered product features across CRM and GovTech systems, then improved team delivery with GitHub Actions CI/CD and ESLint-based code standards.",
         "tags": ["React", "TypeScript", "GitHub Actions", "ESLint"]
       },
       {
         "title": "CS:GO Case Opening Platform",
         "category": "Gaming · iGaming",
-        "desc": "A gaming platform for opening Counter-Strike: GO cases — with animated roulette-style drops, real-time inventory, item upgrade mechanics and secure payments.",
+        "desc": "Built a Counter-Strike case-opening product with animated roulette drops, real-time inventory, item upgrades and payment flows.",
         "tags": ["React", "WebSockets", "Animations", "Payments"]
       }
     ]
   },
   "process": {
     "eyebrow": "How I work",
-    "title": "A simple, transparent process",
-    "subtitle": "Clear communication and steady progress from the first call to launch and beyond.",
+    "title": "A clear path from scope to launch",
+    "subtitle": "You always know what is being built, what changed and what happens next.",
     "steps": [
       {
         "title": "Discovery",
-        "desc": "We discuss your goals, audience and requirements to define a clear scope and roadmap."
+        "desc": "We define goals, users, risks and the first useful release before writing code."
       },
       {
         "title": "Design",
-        "desc": "I craft wireframes and a polished UI that matches your brand and delights your users."
+        "desc": "I turn the scope into flows, wireframes and UI decisions that fit the product and keep development focused."
       },
       {
         "title": "Development",
-        "desc": "Clean, tested and well-documented code built in short iterations with regular demos."
+        "desc": "I build in short iterations, share progress regularly and keep code structured for future changes."
       },
       {
         "title": "Launch & Support",
-        "desc": "We ship to production, monitor performance and keep improving after release."
+        "desc": "We release, check performance and fix the next highest-value improvements after real use."
       }
     ]
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let's build something great",
-    "subtitle": "Have a project in mind or just want to say hi? I usually reply within a few hours.",
-    "cta": "Message on Telegram",
+    "title": "Tell me what you want to build",
+    "subtitle": "Send the context you already have: goal, deadline, current stack or a rough idea. I usually reply within a few hours.",
+    "cta": "Message me on Telegram",
     "channels": {
-      "email": "Email",
       "telegram": "Telegram",
       "facebook": "Facebook"
     },
     "form": {
-      "heading": "Send me a message",
+      "heading": "Project details",
       "name": "Name",
       "namePlaceholder": "Your name",
       "email": "Email",
@@ -157,7 +158,7 @@
       "projectType": "Project type",
       "projectTypeOptions": [
         "Web application",
-        "Website / Landing",
+        "Website or landing page",
         "E-commerce",
         "Gaming platform",
         "Other"
@@ -171,32 +172,39 @@
         "Not sure yet"
       ],
       "message": "Message",
-      "messagePlaceholder": "Tell me about your project...",
-      "submit": "Send message",
+      "messagePlaceholder": "Goal, deadline, links, current stack or anything else useful",
+      "submit": "Send project details",
       "sending": "Sending...",
-      "success": "Thanks! Your message has been sent — I'll get back to you soon.",
-      "error": "Something went wrong. Please try again or write me directly."
+      "success": "Message sent. I'll reply soon with the next step.",
+      "error": "I couldn't send the message. Try again or contact me directly by email or Telegram."
     }
   },
   "about": {
     "eyebrow": "About",
-    "title": "About me",
-    "subtitle": "An independent developer based in Tbilisi, Georgia — registered as an individual entrepreneur and working with clients worldwide.",
+    "title": "About Andrei",
+    "subtitle": "An independent developer based in Tbilisi, registered as an individual entrepreneur and available for remote work with clients worldwide.",
     "name": "Andrei",
     "role": "Full-stack Developer",
-    "bio": "Hi! I'm a full-stack developer with 6+ years of experience building and scaling complex B2B/B2C web applications — e-commerce, document workflow, EdTech and gaming platforms. On the frontend I work with React and TypeScript; on the backend with Node.js and Golang — so you get fast, reliable products and a single point of contact.",
+    "profileLabel": "Profile",
+    "bio": "I build and scale B2B/B2C web products: e-commerce, document workflow, EdTech, gaming platforms and internal tools. I work across React, TypeScript, Node.js and Golang, so product decisions, frontend details and backend constraints stay connected.",
     "detailsTitle": "Business details",
-    "contactsTitle": "Contacts",
-    "legalFormLabel": "Legal form",
+    "legalFormLabel": "Business form",
     "legalForm": "Individual Entrepreneur",
-    "idLabel": "ID",
-    "activityLabel": "Activity field",
+    "idLabel": "Business ID",
+    "activityLabel": "Activity",
     "activityValue": "Software",
-    "addressLabel": "Address",
-    "addressValue": "Georgia, Tbilisi, Saburtalo district, Bakhtrioni street, N22"
+    "addressLabel": "Registered address",
+    "addressValue": "Georgia, Tbilisi, Saburtalo district, Bakhtrioni street, N22",
+    "copyValueLabel": "Copy {label}: {value}",
+    "copiedLabel": "Copied"
   },
   "footer": {
     "rights": "All rights reserved.",
     "backToTop": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page does not exist or has been moved.",
+    "home": "Go to homepage"
   }
 }

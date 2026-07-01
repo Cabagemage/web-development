@@ -49,13 +49,13 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-brand-400/60 focus:bg-white/[0.05] focus:ring-2 focus:ring-brand-500/20';
+    'w-full rounded-lg border border-[color:var(--line)] bg-[rgba(9,13,18,0.54)] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-brand-300/70 focus:bg-[rgba(9,13,18,0.78)] focus:ring-2 focus:ring-brand-300/15';
   const selectClass = `${inputClass} cursor-pointer appearance-none pr-10`;
 
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-3xl border border-white/10 bg-white/[0.02] p-6 sm:p-8"
+      className="rounded-lg border border-[color:var(--line)] bg-[rgba(9,13,18,0.5)] p-6 sm:p-8"
     >
       <h3 className="text-lg font-semibold text-white">{t('heading')}</h3>
 
@@ -109,11 +109,11 @@ export default function ContactForm() {
               defaultValue=""
               className={selectClass}
             >
-              <option value="" className="bg-[#0b1020]">
+              <option value="" className="bg-[#101820]">
                 {t('projectType')}
               </option>
               {projectTypeOptions.map((option) => (
-                <option key={option} value={option} className="bg-[#0b1020]">
+                <option key={option} value={option} className="bg-[#101820]">
                   {option}
                 </option>
               ))}
@@ -139,11 +139,11 @@ export default function ContactForm() {
               defaultValue=""
               className={selectClass}
             >
-              <option value="" className="bg-[#0b1020]">
+              <option value="" className="bg-[#101820]">
                 {t('budget')}
               </option>
               {budgetOptions.map((option) => (
-                <option key={option} value={option} className="bg-[#0b1020]">
+                <option key={option} value={option} className="bg-[#101820]">
                   {option}
                 </option>
               ))}
@@ -209,9 +209,12 @@ export default function ContactForm() {
         </button>
 
         {status === 'success' && (
-          <p className="flex items-center gap-2 text-sm text-emerald-400">
+          <p
+            role="status"
+            className="flex items-start gap-2 text-sm text-emerald-400"
+          >
             <svg
-              className="h-4 w-4"
+              className="mt-0.5 h-4 w-4 shrink-0"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -223,9 +226,12 @@ export default function ContactForm() {
           </p>
         )}
         {status === 'error' && (
-          <p className="flex items-center gap-2 text-sm text-red-400">
+          <p
+            role="alert"
+            className="flex items-start gap-2 text-sm text-red-400"
+          >
             <svg
-              className="h-4 w-4"
+              className="mt-0.5 h-4 w-4 shrink-0"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

@@ -4,23 +4,10 @@ import { useTranslations } from 'next-intl';
 import Reveal from './Reveal';
 import ContactForm from './ContactForm';
 
-const EMAIL = 'zdriwmirenek@gmail.com';
 const TELEGRAM_URL = 'https://t.me/Memecounterr';
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61590966781844';
 
 const CHANNELS = [
-  {
-    key: 'email',
-    href: `mailto:${EMAIL}`,
-    value: EMAIL,
-    fill: false,
-    icon: (
-      <>
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-        <path d="m22 7-10 6L2 7" />
-      </>
-    )
-  },
   {
     key: 'telegram',
     href: TELEGRAM_URL,
@@ -44,17 +31,13 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative scroll-mt-24 py-24 sm:py-32">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-600/15 blur-[120px]" />
-      </div>
-
       <div className="container-px">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-8 sm:p-12 lg:p-14">
+          <div className="relative overflow-hidden rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.72)] p-6 sm:p-8 lg:p-10">
             <div className="absolute inset-0 grid-bg opacity-30" />
             <div className="relative grid gap-12 lg:grid-cols-2">
               <div>
-                <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-300">
+                <span className="mono-label inline-block text-xs text-[color:var(--signal)]">
                   {t('eyebrow')}
                 </span>
                 <h2 className="mt-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
@@ -69,11 +52,11 @@ export default function Contact() {
                     <a
                       key={c.key}
                       href={c.href}
-                      target={c.key === 'email' ? undefined : '_blank'}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-white/[0.05]"
+                      className="group flex items-center gap-4 rounded-lg border border-[color:var(--line)] bg-[rgba(9,13,18,0.42)] p-4 transition hover:border-brand-300/60 hover:bg-brand-300/5"
                     >
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-300 ring-1 ring-white/10">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-[color:var(--line)] text-[color:var(--signal)]">
                         <svg
                           className="h-5 w-5"
                           viewBox="0 0 24 24"
@@ -87,7 +70,7 @@ export default function Contact() {
                         </svg>
                       </span>
                       <span className="min-w-0">
-                        <span className="block text-xs uppercase tracking-wide text-slate-500">
+                        <span className="block text-xs uppercase text-slate-500">
                           {t(`channels.${c.key}`)}
                         </span>
                         <span className="block truncate text-sm font-medium text-white">
@@ -95,7 +78,7 @@ export default function Contact() {
                         </span>
                       </span>
                       <svg
-                        className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition group-hover:translate-x-1 group-hover:text-brand-300"
+                        className="ml-auto h-4 w-4 shrink-0 text-slate-500 transition group-hover:translate-x-1 group-hover:text-[color:var(--signal)]"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"

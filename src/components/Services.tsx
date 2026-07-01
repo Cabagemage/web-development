@@ -51,10 +51,9 @@ export default function Services() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i % 3}>
-              <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-white/[0.04]">
-                <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-brand-500/10 blur-2xl transition-opacity duration-300 group-hover:opacity-100 sm:opacity-0" />
+              <div className="group h-full rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.66)] p-6 transition duration-200 hover:border-brand-300/60 hover:bg-brand-300/5">
                 <div className="relative">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-300 ring-1 ring-white/10">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-md border border-[color:var(--line)] bg-[rgba(9,13,18,0.46)] text-[color:var(--signal)]">
                     <svg
                       className="h-6 w-6"
                       viewBox="0 0 24 24"

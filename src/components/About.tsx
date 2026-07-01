@@ -1,15 +1,19 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
 
-const TELEGRAM_URL = 'https://t.me/Memecounterr';
-const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61590966781844';
-
-function CopyableValue({ value, label }: { value: string; label: string }) {
+function CopyableValue({
+  value,
+  ariaLabel,
+  copiedLabel
+}: {
+  value: string;
+  ariaLabel: string;
+  copiedLabel: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -33,8 +37,8 @@ function CopyableValue({ value, label }: { value: string; label: string }) {
     <button
       type="button"
       onClick={copy}
-      aria-label={`${label}: ${value} — copy`}
-      className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-2.5 py-1 font-medium text-white transition hover:border-brand-400/40 hover:bg-white/[0.06]"
+      aria-label={ariaLabel}
+      className="group inline-flex items-center gap-2 rounded-md border border-[color:var(--line)] bg-[rgba(9,13,18,0.5)] px-2.5 py-1 font-medium text-white transition hover:border-brand-300/60 hover:bg-brand-300/5"
     >
       <span className="tabular-nums">{value}</span>
       {copied ? (
@@ -51,7 +55,7 @@ function CopyableValue({ value, label }: { value: string; label: string }) {
         </svg>
       ) : (
         <svg
-          className="h-4 w-4 text-slate-400 transition group-hover:text-brand-300"
+          className="h-4 w-4 text-slate-400 transition group-hover:text-[color:var(--signal)]"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -63,6 +67,9 @@ function CopyableValue({ value, label }: { value: string; label: string }) {
           <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
         </svg>
       )}
+      <span className="sr-only" aria-live="polite">
+        {copied ? copiedLabel : ''}
+      </span>
     </button>
   );
 }
@@ -79,10 +86,6 @@ export default function About() {
 
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute right-0 top-1/4 h-[400px] w-[400px] rounded-full bg-brand-600/10 blur-[120px]" />
-      </div>
-
       <div className="container-px">
         <SectionHeading
           eyebrow={t('eyebrow')}
@@ -91,53 +94,61 @@ export default function About() {
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-5">
-          {/* Portrait + intro */}
           <Reveal className="lg:col-span-2">
-            <div className="h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]">
-              <div className="relative aspect-[4/5] w-full">
-                <Image
-                  src="/portrait.png"
-                  alt={t('name')}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070a14] via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-display text-2xl font-bold text-white">
-                    {t('name')}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-brand-300">
-                    {t('role')}
-                  </p>
+            <div className="h-full rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.72)] p-5 sm:p-6">
+              <div className="relative overflow-hidden rounded-lg border border-[color:var(--line)] bg-[rgba(9,13,18,0.74)] p-6">
+                <div className="absolute inset-0 grid-bg opacity-50" />
+                <div className="relative">
+                  <div className="mono-label text-[10px] text-slate-500">
+                    {t('profileLabel')}
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    className="mt-10 font-display text-8xl font-bold leading-none text-[color:var(--signal)]"
+                  >
+                    A
+                  </div>
+                  <div className="mt-8 border-t border-[color:var(--line)] pt-5">
+                    <h3 className="font-display text-2xl font-bold text-white">
+                      {t('name')}
+                    </h3>
+                    <p className="mt-1 text-sm font-medium text-[color:var(--mint)]">
+                      {t('role')}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <p className="p-6 text-sm leading-relaxed text-slate-400">
+              <p className="mt-5 text-sm leading-relaxed text-slate-400">
                 {t('bio')}
               </p>
             </div>
           </Reveal>
 
-          {/* Details + contacts */}
           <div className="flex flex-col gap-6 lg:col-span-3">
             <Reveal delay={1}>
-              <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:p-9">
+              <div className="rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.72)] p-7 sm:p-9">
                 <h3 className="text-lg font-semibold text-white">
                   {t('detailsTitle')}
                 </h3>
-                <dl className="mt-6 divide-y divide-white/5">
+                <dl className="mt-6 divide-y divide-[rgba(38,50,65,0.8)]">
                   {details.map((d) => (
                     <div
                       key={d.label}
                       className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
                     >
-                      <dt className="shrink-0 text-xs uppercase tracking-wide text-slate-500 sm:w-44">
+                      <dt className="shrink-0 text-xs uppercase text-slate-500 sm:w-44">
                         {d.label}
                       </dt>
                       <dd className="text-sm font-medium text-white sm:text-right">
                         {d.copyable ? (
-                          <CopyableValue value={d.value} label={d.label} />
+                          <CopyableValue
+                            value={d.value}
+                            ariaLabel={t('copyValueLabel', {
+                              label: d.label,
+                              value: d.value
+                            })}
+                            copiedLabel={t('copiedLabel')}
+                          />
                         ) : (
                           d.value
                         )}
@@ -145,69 +156,6 @@ export default function About() {
                     </div>
                   ))}
                 </dl>
-              </div>
-            </Reveal>
-
-            <Reveal delay={2}>
-              <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-7 sm:p-9">
-                <h3 className="text-lg font-semibold text-white">
-                  {t('contactsTitle')}
-                </h3>
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  <a
-                    href={TELEGRAM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-white/[0.05]"
-                  >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-300 ring-1 ring-white/10">
-                      <svg
-                        className="h-5 w-5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="m22 2-7 20-4-9-9-4 20-7Z" />
-                      </svg>
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block text-xs uppercase tracking-wide text-slate-500">
-                        Telegram
-                      </span>
-                      <span className="block truncate text-sm font-medium text-white">
-                        @Memecounterr
-                      </span>
-                    </span>
-                  </a>
-
-                  <a
-                    href={FACEBOOK_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-white/[0.05]"
-                  >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-300 ring-1 ring-white/10">
-                      <svg
-                        className="h-5 w-5"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" />
-                      </svg>
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block text-xs uppercase tracking-wide text-slate-500">
-                        Facebook
-                      </span>
-                      <span className="block truncate text-sm font-medium text-white">
-                        Andrei Zaitsev
-                      </span>
-                    </span>
-                  </a>
-                </div>
               </div>
             </Reveal>
           </div>

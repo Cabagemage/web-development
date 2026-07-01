@@ -20,17 +20,17 @@ export default function Process() {
         />
 
         <div className="relative mt-14">
-          <div className="absolute left-[27px] top-2 hidden h-[calc(100%-1rem)] w-px bg-gradient-to-b from-brand-500/50 via-accent-500/30 to-transparent md:left-1/2 md:block" />
+          <div className="absolute left-[23px] top-2 hidden h-[calc(100%-1rem)] w-px bg-[color:var(--line)] md:left-1/2 md:block" />
 
           <div className="grid gap-6 md:grid-cols-2 md:gap-x-16 md:gap-y-10">
             {steps.map((step, i) => (
               <Reveal key={step.title} delay={i % 2}>
                 <div
-                  className={`relative flex gap-5 rounded-3xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 ${
+                  className={`relative flex gap-5 rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.66)] p-6 ${
                     i % 2 === 1 ? 'md:mt-12' : ''
                   }`}
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-lg font-bold text-white shadow-lg shadow-brand-500/25">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-[color:var(--line)] bg-[rgba(9,13,18,0.54)] font-display text-base font-bold text-[color:var(--signal)]">
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <div>

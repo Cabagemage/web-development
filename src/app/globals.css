@@ -5,6 +5,15 @@
 :root {
   --font-sans: 'Inter', 'Noto Sans Georgian', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', 'Noto Sans Georgian', system-ui, sans-serif;
+  --font-mono: 'SFMono-Regular', 'Cascadia Code', 'Roboto Mono', ui-monospace, monospace;
+  --ink: #090d12;
+  --panel: #101820;
+  --panel-soft: #0d141b;
+  --line: #263241;
+  --paper: #e7eef4;
+  --muted: #8a98a8;
+  --signal: #f4b860;
+  --mint: #7ddeb8;
 }
 
 @layer base {
@@ -15,13 +24,20 @@
   }
 
   body {
-    @apply bg-[#070a14] text-slate-200 antialiased;
+    @apply antialiased;
+    background:
+      linear-gradient(90deg, rgba(38, 50, 65, 0.22) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(38, 50, 65, 0.16) 1px, transparent 1px),
+      var(--ink);
+    background-size: 96px 96px;
+    color: var(--paper);
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
 
   ::selection {
-    @apply bg-brand-500/40 text-white;
+    background: rgba(244, 184, 96, 0.32);
+    color: white;
   }
 
   h1,
@@ -37,19 +53,35 @@
   }
 
   .glass {
-    @apply border border-white/10 bg-white/[0.03] backdrop-blur-xl;
+    border: 1px solid var(--line);
+    background: rgba(16, 24, 32, 0.82);
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-300 via-accent-400 to-brand-400 bg-clip-text text-transparent;
+    color: var(--signal);
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-accent-500/30 hover:brightness-110 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-200 active:translate-y-px;
+    background: var(--signal);
+    color: var(--ink);
+    box-shadow: 0 0 0 1px rgba(244, 184, 96, 0.32);
+  }
+
+  .btn-primary:hover {
+    background: #ffd18b;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-200 transition-all duration-300 hover:border-white/30 hover:bg-white/5 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-200 active:translate-y-px;
+    border: 1px solid var(--line);
+    background: rgba(16, 24, 32, 0.72);
+    color: var(--paper);
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(244, 184, 96, 0.46);
+    background: rgba(244, 184, 96, 0.08);
   }
 }
 
@@ -58,21 +90,31 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #070a14;
+  background: var(--ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #263241;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #3a4a5d;
 }
 
 .grid-bg {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 60%, transparent 100%);
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 60%, transparent 100%);
+    linear-gradient(to right, rgba(231, 238, 244, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(231, 238, 244, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.workbench-bg {
+  background:
+    linear-gradient(115deg, rgba(244, 184, 96, 0.09), transparent 26rem),
+    linear-gradient(180deg, rgba(125, 222, 184, 0.06), transparent 28rem),
+    var(--ink);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
 }

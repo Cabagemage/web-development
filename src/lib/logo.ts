@@ -2,9 +2,9 @@
 // A stylized "C" arc (code bracket) with a magic sparkle — Code + mage.
 
 export const LOGO_COLORS = {
-  from: '#1b5cf5',
-  via: '#327dff',
-  to: '#06b6d4'
+  from: '#101820',
+  via: '#1a2733',
+  to: '#f4b860'
 } as const;
 
 /**

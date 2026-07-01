@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import { usePathname, useRouter, routing, type Locale } from '@/i18n/routing';
 
@@ -67,6 +67,7 @@ function Flag({ code }: { code: Locale }) {
 
 export default function LanguageSwitcher() {
   const locale = useLocale() as Locale;
+  const t = useTranslations('nav');
   const router = useRouter();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -94,8 +95,8 @@ export default function LanguageSwitcher() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        aria-label="Change language"
-        className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/25 hover:bg-white/10"
+        aria-label={t('language')}
+        className="flex items-center gap-1.5 rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.72)] px-3.5 py-2 text-sm font-semibold text-slate-200 transition hover:border-brand-300/60 hover:bg-brand-300/5"
       >
         <Flag code={current.code} />
         {current.native}
@@ -111,7 +112,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-44 overflow-hidden rounded-2xl border border-white/10 bg-[#0b1020]/95 p-1.5 shadow-2xl backdrop-blur-xl">
+        <div className="absolute right-0 mt-2 w-44 overflow-hidden rounded-lg border border-[color:var(--line)] bg-[#101820]/95 p-1.5 shadow-2xl backdrop-blur-xl">
           {routing.locales.map((code) => {
             const lang = LANGUAGES.find((l) => l.code === code)!;
             const active = code === locale;
@@ -119,10 +120,10 @@ export default function LanguageSwitcher() {
               <button
                 key={code}
                 onClick={() => switchTo(code)}
-                className={`flex w-full items-center justify-between rounded-xl px-3.5 py-2.5 text-sm transition ${
+                className={`flex w-full items-center justify-between rounded-md px-3.5 py-2.5 text-sm transition ${
                   active
-                    ? 'bg-brand-500/20 text-white'
-                    : 'text-slate-300 hover:bg-white/5'
+                    ? 'bg-brand-300/10 text-white'
+                    : 'text-slate-300 hover:bg-brand-300/5'
                 }`}
               >
                 <span className="flex items-center gap-2.5">
@@ -131,7 +132,7 @@ export default function LanguageSwitcher() {
                 </span>
                 {active && (
                   <svg
-                    className="h-4 w-4 text-brand-300"
+                    className="h-4 w-4 text-[color:var(--signal)]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

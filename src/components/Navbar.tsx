@@ -37,14 +37,14 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'border-b border-white/10 bg-[#070a14]/80 backdrop-blur-xl'
+          ? 'border-b border-[color:var(--line)] bg-[rgba(9,13,18,0.9)] backdrop-blur-xl'
           : 'border-b border-transparent'
       }`}
     >
       <nav className="container-px flex h-16 items-center justify-between sm:h-20">
         <a href="#top" className="group flex items-center gap-2.5">
-          <Logo className="h-9 w-9 shadow-lg shadow-brand-500/30 transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105 rounded-xl" />
-          <span className="font-display text-lg font-bold tracking-tight text-white">
+          <Logo className="h-9 w-9 rounded-lg transition-transform duration-300 group-hover:translate-y-[-1px]" />
+          <span className="font-display text-lg font-bold text-white">
             Code<span className="text-gradient">mage</span>
           </span>
         </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+              className="rounded-md px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-brand-300/5 hover:text-white"
             >
               {t(link.key)}
             </a>
@@ -68,9 +68,9 @@ export default function Navbar() {
           </a>
           <button
             type="button"
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.72)] text-white lg:hidden"
           >
             <svg
               className="h-5 w-5"
@@ -90,14 +90,14 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="border-t border-white/10 bg-[#070a14]/95 backdrop-blur-xl lg:hidden">
+        <div className="border-t border-[color:var(--line)] bg-[rgba(9,13,18,0.96)] backdrop-blur-xl lg:hidden">
           <div className="container-px flex flex-col gap-1 py-4">
             {LINKS.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition hover:bg-white/5"
+                className="rounded-lg px-4 py-3 text-base font-medium text-slate-200 transition hover:bg-brand-300/5"
               >
                 {t(link.key)}
               </a>

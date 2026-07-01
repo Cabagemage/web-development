@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
       'Full-stack web development by an independent developer. React, Next.js, TypeScript, Node.js, Golang.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#070a14',
-    theme_color: '#070a14',
+    background_color: '#090d12',
+    theme_color: '#090d12',
     icons: [
       {
         src: '/icon',

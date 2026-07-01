@@ -6,14 +6,6 @@ import SectionHeading from './SectionHeading';
 
 type Item = { title: string; category: string; desc: string; tags: string[] };
 
-const GRADIENTS = [
-  'from-brand-500/30 to-accent-500/30',
-  'from-fuchsia-500/30 to-brand-500/30',
-  'from-accent-500/30 to-emerald-500/30',
-  'from-orange-500/30 to-fuchsia-500/30',
-  'from-amber-500/30 to-red-500/30'
-];
-
 export default function Portfolio() {
   const t = useTranslations('portfolio');
   const items = t.raw('items') as Item[];
@@ -30,21 +22,16 @@ export default function Portfolio() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={i % 2}>
-              <div className="group h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <div
-                  className={`relative flex h-48 items-center justify-center overflow-hidden bg-gradient-to-br ${
-                    GRADIENTS[i % GRADIENTS.length]
-                  } sm:h-56`}
-                >
-                  <div className="absolute inset-0 grid-bg opacity-40" />
-                  <span className="relative font-display text-5xl font-bold text-white/80">
-                    {item.title.charAt(0)}
+              <article className="group h-full overflow-hidden rounded-lg border border-[color:var(--line)] bg-[rgba(16,24,32,0.66)] transition duration-200 hover:border-brand-300/60">
+                <div className="flex items-center justify-between gap-4 border-b border-[color:var(--line)] bg-[rgba(9,13,18,0.35)] px-5 py-4">
+                  <span className="mono-label text-[10px] text-[color:var(--signal)]">
+                    case {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/20 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+                  <span className="text-right text-xs font-medium text-slate-400">
                     {item.category}
                   </span>
                 </div>
-                <div className="p-7">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold text-white">
                     {item.title}
                   </h3>
@@ -55,14 +42,14 @@ export default function Portfolio() {
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-md bg-white/5 px-2.5 py-1 text-xs text-slate-400"
+                        className="rounded-md border border-[color:var(--line)] bg-[rgba(9,13,18,0.42)] px-2.5 py-1 text-xs text-slate-400"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
+              </article>
             </Reveal>
           ))}
         </div>
